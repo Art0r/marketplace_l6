@@ -56,6 +56,15 @@
     </div>
 
     <div class="form-group">
+        <label>Categorias</label>
+        <select name="categories[]" id="" class="form-control" multiple>
+            @foreach($categories as $c)
+                <option value="{{$c->id}}">{{$c->name}}</option>
+            @endforeach
+        </select>
+    </div>
+
+    <div class="form-group">
         <button class="btn btn-lg btn-success " type="submit">Criar Produto</button>
     </div>
 </form>
